@@ -3,7 +3,12 @@
 
 /*Page Basic Style=>In order to remove default browser margins and padding on all elements*/
 
-/************CSS STANDARD RESET***********
+/************CSS STANDARD RESET***********/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -21,73 +26,17 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;§
+	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-
 }
-
-h3 {
-	padding-left: 10px;
-	font-weight: normal;
-	font-style: italic;
-	font-size: 2.rem;
-	text-align: center;
-	color: #555;
-
-}
-
-h2 {
-	padding-left: 10px;
-	font-weight: normal;
-	font-size: 20px;
-	text-align: center;
-	text-transform:uppercase;
-}
-
-p {
-	font-weight: lighter;
-	color: #555;
-	line-height: 1.5;
-	font-size: 24px;
-	padding: 10px;
-	text-align: left;
-}
-
-li {
-	font-weight: lighter;
-	line-height: 1.5;
-	font-size: 24px;
-	padding: 10px;
-}
-*/
-
-button {
-
-	position: relative;
-	display:inline;
-	visibility: none;
-	font-weight: bold;
-	font-size: 0.8rem;
-	background-color:inherit;
-	border-bottom: 5px bold black;
-
-
-
-    cursor:pointer;
-	margin: 5px;
-}
-
-/*
-************* HTML5 display-role reset for older browsers ************
-
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1.2;
-	background-color: #E9EDEF;
+	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -104,7 +53,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-*/
 
     /********************EDIT ONLY BELOW**********************/
 
@@ -115,99 +63,90 @@ table {
 * {
   box-sizing:border-box;
 }
-
-body {
-  background-color: #E9EAEF;
-  font-family: Helvetica;
- margin: 0 auto;
-}
-
-/* Center website */
-
-#logoImage {
-
-	width: 100px;
-	height: auto;
-	margin: 0 auto;
-	margin-top: 5%;
-
-}
-
-#logoImage img {
-	width:100%;
-	display: block;
-	margin-left: auto; margin-right: auto;
-
-}
-.main {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.my_Intro {
-	width:90%;
-	margin: 5% auto;
-	font-size: 2.6rem;
-    line-height: 1.5em;
-	font-weight:lighter;
-	font-family: CallunaLghtRegular, Georgia, serif;
-	word-break:keep-all;
-	text-align: center;
-}
-#nav_top{
-
-	width:100%;
-	text-align: right;
-	margin: 5% 10% 5% auto;
-
-}
-#nav_top li {
-	font-size:1.15em ;
-	font-weight: bold;
-	position: relative;
-	display: inline-block;
-	letter-spacing: -0.07em;
-	margin: 0 20px 0 auto;
-
-}
-
 a:link {
- color:#333;
-text-decoration: none;
+	color:#333;
+	text-decoration: none;
 }
 a:visited{
 	color:#333;
 }
 .activeLnk, .lnk:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
+	/* Center website */
 
-
-#myBtnContainer{ margin:0 auto; width:100%; height: auto;flex-wrap: wrap;
-text-align: center;}
-
-#myBtnContainer button{ position: relative; display: inline; width:100px; height: 50px; font-size: 0.99em; text-align: center;
+body, .main{
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: #E9EAEF;
+	font-family: Helvetica;
+	margin: 0 auto;
 }
-
+#imageDiv, #imageDiv img{
+	width: 100px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+.myIntro {
+	width:90%;
+	margin: 5% auto;
+	font-size: 2rem;
+    line-height: 2.5rem;
+	font-weight:lighter;
+	font-family: CallunaLghtRegular, Georgia, serif;
+	word-break:keep-all;
+	text-align: center;
+}
+#navTop{
+	width:100%;
+	text-align: right;
+	margin:5% 10% 5%  auto;
+	padding-right: 5%;
+}
+#navTop li {
+	font-size:1.1rem ;
+	font-weight:normal;
+	position: relative;
+	display: inline-block;
+	letter-spacing: -0.03rem;
+	margin:5px 5px auto;
+}
+#myBtnContainer{
+	margin:0 auto;
+	width:100%;
+	height: auto;
+	flex-wrap: wrap;
+	text-align: center;
+}
+#myBtnContainer button{
+	position: relative;
+	display: inline;
+	width:10%;
+	height: 50px;
+	font-size: 0.9rem;
+	text-align: center;
+}
 /* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
+
+.row .column {
+  padding: 0.4rem;
 }
 
 /* Create three equal columns that floats next to each other */
+
 .column {
 	position: relative;
-	margin: 10px auto;
+	margin: 0 auto;
 	width:80%;
 	height: auto;
 	display:none;
 	text-align: center;/* Hide all elements by default */
-
 }
+
 .column img{
-	margin: 5% 0 0 0;
-	width:20%;
+	margin: 5% 20% 0 0;
+	width:30%;
 }
 .column h4 {
 	font-size: 3rem;
@@ -261,6 +200,8 @@ text-align: center;}
 .content {
   background-color: white;
   padding: 10px;
+  text-align: left;
+  margin: 2%;
 }
 
 /* The "show" class is added to the filtered elements */
